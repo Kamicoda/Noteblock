@@ -24,93 +24,167 @@
     <!--Scripts-->
     <script src="https://kit.fontawesome.com/06adabaaa3.js"></script>
     <script type="text/javascript" src="assets/js/script1.js"></script>
+    <script type="text/javascript" src="assets/js/script2.js"></script>
 </head>
 
-<body>
+<body onload="checkEdits()" class=" bg-dark">
 
     <!--navigation-->
-    <div class="dark-background frontened">
-        
+    <div class="container-fluid bg-dark">
+        <ul class="nav justify-content-center w-80">
+            <li class="nav-item">
+                <button id="aboutNav" type="button" class="btn btn-secondary btn-lg ">About</button>
+            </li>
+            <li class="nav-item">
+                <button id="notesNav" type="button" class="btn btn-primary btn-lg">Notes</button>
+            </li>
+            <li class="nav-item">
+                <button id="linksNav" type="button" class="btn btn-secondary btn-lg">Links</button>
+            </li>
+        </ul>
     </div>
-    <div class="jumbotron bg-dark position-fixed w-100 h-100">
-        <div class="mainmenu">
 
-            <div class="row navtoprow">
+    <div class="jumbotron header bg-grey mx-auto">
+        <h5> Hello world!</h5>
+    </div>
 
-                <div class="col-6 about">
-                    <div class="jumbotron cabout">
+    <div class="jumbotron header bg-light mx-auto">
+        <div class="container-flex">
 
-                        <div class="row">
-                            <div class="col">
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
-                                    possim assum. Typi non habent claritatem insitam; est usus legentis
-                                </p>
-                                <div class="col align-bottom right">
-                                    <button type="button" class="btn btn-secondary btn-lg babout content-end frontened">About</button>
-                                </div>
-                            </div>
-                        </div>
 
+            <section id="aboutSec">
+                <div class="row">
+                    <div class="col">
+                        <h1>about</h1>
+                        <p>content here</p>
                     </div>
                 </div>
+            </section>
 
-                <div class="col-6 games">
+            <section id="notesSec">
+                <div class="row">
 
-                    <div class="jumbotron cgames">
-                        <div class="row">
-                            <div class="col">
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
-                                    possim assum. Typi non habent claritatem insitam; est usus legentis
-                                </p>
-                                <div class="col">
-                                    <button type="button" class="btn btn-primary btn-lg bgames frontened ">Games</button>
+                    <div class="col-8">
+                        <h1>notes</h1>
+                        <p>content here</p>
+                        <div id="editList" class="#">
+
+                            <p id="edit" contenteditable="true" class="editableP"></p>
+
+                            <p id="edit1" contenteditable="true" class="editableP"></p>
+
+                            <p id="edit2" contenteditable="true" class="editableP"></p>
+
+                            <p id="edit3" contenteditable="true" class="editableP"></p>
+
+                            <p id="edit4" contenteditable="true" class="editableP"></p>
+
+                            <p id="edit5" contenteditable="true" class="editableP"></p>
+
+                            <p id="edit6" contenteditable="true" class="editableP"></p>
+
+                            <p id="edit7" contenteditable="true" class="editableP"></p>
+
+                            <p id="edit8" contenteditable="true" class="editableP"></p>
+
+                            <p id="edit9" contenteditable="true" class="editableP"></p>
+
+                            <div>
+                                <div>
+                                    <button type="button " onclick="save()" class="saveButton">Save
+                        <i class="fas fa-file-download"></i></button>
                                 </div>
-                            </div>
-                        </div>
-                    </div>
 
-                </div>
-            </div>
-
-            <div class="row navbottomrow">
-
-                <div class="col-6 notes">
-
-                    <div class="jumbotron cnotes">
-                        <div class="row">
-                            <div class="col">
-                                <div class="col">
-                                    <button type="button" class="btn btn-primary btn-lg bnotes justify-content-end frontened">Notes</button>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
-                                    possim assum. Typi non habent claritatem insitam; est usus legentis
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="col-6 links">
-
-                    <div class="jumbotron clinks">
-                        <div class="row">
-                            <div class="col">
-                                <div class="col">
-                                    <button type="button" class="btn btn-secondary btn-lg blinks frontened">Links</button>
-                                </div>
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit
-                                    possim assum. Typi non habent claritatem insitam; est usus legentis
-                                </p>
+                                <div id="update"> Edit the text and click to save for next time </div>
                             </div>
                         </div>
                     </div>
+                    <div class="col-2">
+                        <h1>boxes</h1>
+                        <p>content here</p>
+                        <div id="checkBox" class="checkbox">
+                            <i class="far fa-square"></i>
+                            <i class="far fa-check-square"></i>
+                        </div>
+                        <div id="checkBox1" class="checkbox">
+                            <i class="far fa-square"></i>
+                            <i class="far fa-check-square"></i>
+                        </div>
+                        
+                        <div id="checkBox2" class="checkbox">
+                            <i class="far fa-square"></i>
+                            <i class="far fa-check-square"></i>
+                        </div>
+                        
+                        <div id="checkBox3" class="checkbox">
+                            <i class="far fa-square"></i>
+                            <i class="far fa-check-square"></i>
+                        </div>
+                        
+                        <div id="checkBox4" class="checkbox">
+                            <i class="far fa-square"></i>
+                            <i class="far fa-check-square"></i>
+                        </div>
+                        
+                        <div id="checkBox5" class="checkbox">
+                            <i class="far fa-square"></i>
+                            <i class="far fa-check-square"></i>
+                        </div>
+                        
+                        <div id="checkBox6" class="checkbox">
+                            <i class="far fa-square"></i>
+                            <i class="far fa-check-square"></i>
+                        </div>
+                        
+                        <div id="checkBox7" class="checkbox">
+                            <i class="far fa-square"></i>
+                            <i class="far fa-check-square"></i>
+                        </div>
+                        
+                        <div id="checkBox8" class="checkbox">
+                            <i class="far fa-square"></i>
+                            <i class="far fa-check-square"></i>
+                        </div>
+                        
+                        <div id="checkBox9" class="checkbox">
+                            <i class="far fa-square"></i>
+                            <i class="far fa-check-square"></i>
+                        </div>
+
+
+
+                    </div>
 
                 </div>
-            </div>
+            </section>
+
+            <section id="gamesSec">
+                <div class="row">
+                    <div class="col">
+                        <h1>games</h1>
+                        <p>content here</p>
+                        <button>game1</button>
+                        <button>game2</button>
+                        <button>game3</button>
+                    </div>
+                </div>
+            </section>
+
+            <section id="linksSec">
+                <div class="row">
+                    <div class="col">
+                        <h1>links</h1>
+                        <p>content here</p>
+                    </div>
+                </div>
+            </section>
+
+
         </div>
-
     </div>
+
+
+
 
 </body>
 <footer>
